@@ -731,6 +731,15 @@ export class PanelLayoutManager implements AppModule {
     this.createNewsPanel('tech', 'panels.tech');
     this.createNewsPanel('finance', 'panels.finance');
 
+    // Paperclip task manager panel (local API: localhost:3100)
+    this.lazyPanel('paperclip', () =>
+      import('@/components/PaperclipPanel').then(m => {
+        const p = new m.PaperclipPanel();
+        this.ctx.paperclipPanel = p;
+        return p;
+      }),
+    );
+
     this.createPanel('heatmap', () => new HeatmapPanel());
     this.createPanel('markets', () => new MarketPanel());
     this.createPanel('stock-analysis', () => new StockAnalysisPanel());

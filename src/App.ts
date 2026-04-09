@@ -693,6 +693,7 @@ export class App {
       digestPanel: null,
       speciesPanel: null,
       renewablePanel: null,
+      paperclipPanel: null,
       authModal: null,
       authHeaderWidget: null,
       tvMode: null,

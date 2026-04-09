@@ -6,16 +6,16 @@
    ============================================================ */
 :root {
   /* Backgrounds */
-  --bg: #0a0a0a;
-  --bg-secondary: #111;
-  --surface: #141414;
-  --surface-hover: #1e1e1e;
-  --surface-active: #1a1a2e;
+  --bg: #0D1117;
+  --bg-secondary: #161B22;
+  --surface: #1C2128;
+  --surface-hover: #22272E;
+  --surface-active: #1F2937;
 
   /* Borders */
-  --border: #2a2a2a;
-  --border-strong: #444;
-  --border-subtle: #1a1a1a;
+  --border: #30363D;
+  --border-strong: #484F58;
+  --border-subtle: #21262D;
 
   /* Text */
   --text: #e8e8e8;
@@ -24,7 +24,7 @@
   --text-muted: #666;
   --text-faint: #555;
   --text-ghost: #444;
-  --accent: #fff;
+  --accent: #58A6FF;
 
   /* Overlays & shadows */
   --overlay-subtle: rgba(255, 255, 255, 0.03);
@@ -37,15 +37,15 @@
   --darken-heavy: rgba(0, 0, 0, 0.3);
 
   /* Scrollbar */
-  --scrollbar-thumb: #333;
+  --scrollbar-thumb: #30363D;
   --scrollbar-thumb-hover: #555;
 
   /* Input */
-  --input-bg: #1a1a1a;
+  --input-bg: #161B22;
 
   /* Panels */
-  --panel-bg: #141414;
-  --panel-border: #2a2a2a;
+  --panel-bg: #1C2128;
+  --panel-border: #30363D;
 
   /* Map */
   --map-bg: #020a08;
@@ -54,9 +54,9 @@
   --map-stroke: #0f5040;
 
   /* Font stack */
-  --font-mono: 'SF Mono', 'Monaco', 'Cascadia Code', 'Fira Code', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
   /* Base body font, controlled by font preference (mono vs system) */
-  --font-body-base: var(--font-mono);
+  --font-body-base: 'Inter', system-ui, -apple-system, sans-serif;
   /* Effective body font used throughout the app */
   --font-body: var(--font-body-base);
 }
@@ -213,6 +213,7 @@ html {
 body {
   font-family: var(--font-body);
   font-size: 12px;
+  line-height: 1.5;
   line-height: 1.5;
   background: var(--bg);
   color: var(--text);
@@ -1207,6 +1208,7 @@ canvas,
 .panel {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1408,7 +1410,7 @@ body.panel-resize-active iframe {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: var(--overlay-subtle);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
@@ -1886,7 +1888,7 @@ body.panel-resize-active iframe {
 .panel-content {
   flex: 1;
   overflow-y: auto;
-  padding: 8px;
+  padding: 12px;
   min-width: 0;
   user-select: none;
 }
