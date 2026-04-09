@@ -296,7 +296,8 @@ export const RUNTIME_FEATURES: RuntimeFeatureDefinition[] = [
 ];
 
 function readEnvSecret(key: RuntimeSecretKey): string {
-  const envValue = (import.meta as { env?: Record<string, unknown> }).env?.[key];
+  const env = (import.meta as { env?: Record<string, unknown> }).env;
+  const envValue = env?.[key] ?? env?.['VITE_' + key];
   return typeof envValue === 'string' ? envValue.trim() : '';
 }
 
